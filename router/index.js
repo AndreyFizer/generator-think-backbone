@@ -1,6 +1,6 @@
-// Created by andrey on 12.05.16.
-
-"use strict";
+/**
+ * Created by andrey on 12.05.16.
+ */
 
 var generator  = require('yeoman-generator');
 var util       = require('util');
@@ -12,10 +12,11 @@ function Generator() {
     generator.NamedBase.apply(this, arguments);
     var dirPath = '../templates';
     this.sourceRoot(path.join(__dirname, dirPath));
+    //this.argument('model', { type: String, required: false });
 }
 
 util.inherits(Generator, generator.NamedBase);
 
-Generator.prototype.createModelFiles = function createModelFiles() {
-    this.template('model.js', path.join('public/js/models', this.name + '.js'));
+Generator.prototype.createViewFiles = function createViewFiles() {
+    this.template('router.js', path.join('public/js', this.name + '.js'));
 };

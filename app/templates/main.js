@@ -1,7 +1,10 @@
-/**
- * Created by andrey on 12.05.16.
- */
+/*global <%=_.classify(appname)%>*/
 
-define(['<%= _.slugify(appname) %>', 'jquery'], function(<%= _.classify(appname) %>, $){
-<%= _.classify(appname) %>.start();
+"use strict";
+
+define([
+    '<%= _.slugify(appname) %>', 
+    'jquery'
+], function(<%=_.classify(appname)%>, $){
+    <%=_.classify(appname)%>.start();
 });

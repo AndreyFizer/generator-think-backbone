@@ -1,21 +1,19 @@
-// Created by andrey on 12.05.16.
+/*global <%=_.classify(appname)%>, Backbone*/
 
 "use strict";
 
 define(['backbone'], function () {
-    <%= _.classify(appname) %> = {
-        init: function () {
-            // initialize router, views, data and layouts
-        },
-        start: function () {
-            <%= _.classify(appname) %>.init();
+    <%=_.classify(appname)%> = {
+        init       : function () {},
+        start      : function () {
+            <%=_.classify(appname)%>.init();
             Backbone.history.start();
         },
-        Views: {},
-        Models: {},
+        Views      : {},
+        Models     : {},
         Collections: {},
-        Routers: {}
-    }
-
-    return <%= _.classify(appname) %>;
+        Routers    : {}
+    };
+    
+    return <%=_.classify(appname)%>;
 });
