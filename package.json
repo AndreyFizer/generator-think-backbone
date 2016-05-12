@@ -2,9 +2,16 @@
   "name": "generator-think-backbone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreyFizer/generator-think-backbone.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.1",
+    "underscore.string": "~2.3.1"
   },
   "author": "",
   "license": "ISC"
