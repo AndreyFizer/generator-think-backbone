@@ -33,7 +33,7 @@ AppGenerator.prototype.askFor = function () {
     var cb = this.async();
     
     console.log(this.yeoman);
-    console.log('Out of the box I include HTML5 Boilerplate, jQuery, Backbone.js and Modernizr.');
+    console.log('<<< Backbone.js >>>');
     
     var prompts = [{
         type   : 'list',
@@ -71,23 +71,19 @@ AppGenerator.prototype.askFor = function () {
     }.bind(this));
 };
 
-// AppGenerator.prototype.packageJSON = function packageJSON() {
 AppGenerator.prototype.genPackageJson = function packageJSON() {
     this.template('_package.json', 'package.json');
 };
 
-// AppGenerator.prototype.git = function git() {
 AppGenerator.prototype.genGitIgnore = function git() {
     this.copy('gitignore', '.gitignore');
 };
 
-// AppGenerator.prototype.bower = function () {
 AppGenerator.prototype.genBowerJson = function () {
     this.copy('bowerrc', '.bowerrc');
     this.copy('_bower.json', 'bower.json');
 };
 
-// AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
 AppGenerator.prototype.genStyle = function mainStylesheet() {
     this.copy('main.css', 'public/styles/main.css');
 };
