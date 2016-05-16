@@ -88,6 +88,10 @@ AppGenerator.prototype.genStyle = function mainStylesheet() {
     this.copy('main.css', 'public/styles/main.css');
 };
 
+AppGenerator.prototype.genApp = function mainStylesheet() {
+    this.copy('_app.js', 'app.js');
+};
+
 AppGenerator.prototype.writeIndexWithRequirejs = function writeIndexWithRequirejs() {
     if (!this.includeRequireJS) {
         return;

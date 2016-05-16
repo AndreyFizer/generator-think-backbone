@@ -4,27 +4,28 @@
 
 require.config({
     shim : {
-        underscore: {
+        Underscore: {
             exports: '_'
         },
-        backbone  : {
+        Backbone  : {
             deps   : [
-                'underscore',
-                'jquery'
+                'Underscore',
+                'jQuery'
             ],
             exports: 'Backbone'
         }
     },
     paths: {
-        jquery    : '../js/libs/jquery/jquery',
-        backbone  : '../js/libs/backbone/backbone',
-        underscore: '../js/libs/underscore/underscore'
+        jQuery    : '../js/libs/jquery/jquery',
+        Backbone  : '../js/libs/backbone/backbone',
+        Underscore: '../js/libs/underscore/underscore'
     }
 });
 
 require([
-    'backbone'
-], function (Backbone) {
-    Backbone.history.start();
+    'app'
+], function (app) {
+    app.init();
+    
     console.log('Hello from Backbone!');
 });

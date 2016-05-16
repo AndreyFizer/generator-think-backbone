@@ -4,7 +4,7 @@
 
 define([
     '<%= _.slugify(appname) %>', 
-    'jquery'
+    'jQuery'
 ], function(<%=_.classify(appname)%>, $){
     <%=_.classify(appname)%>.start();
 });
