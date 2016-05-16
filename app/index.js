@@ -89,7 +89,7 @@ AppGenerator.prototype.genStyle = function mainStylesheet() {
 };
 
 AppGenerator.prototype.genApp = function mainStylesheet() {
-    this.copy('_app.js', 'public/app.js');
+    this.copy('_app.js', 'public/js/app.js');
 };
 
 AppGenerator.prototype.writeIndexWithRequirejs = function writeIndexWithRequirejs() {
@@ -106,6 +106,9 @@ AppGenerator.prototype.writeIndexWithRequirejs = function writeIndexWithRequirej
 AppGenerator.prototype.app = function app() {
     this.mkdir('public');
     this.mkdir('public/js');
+    this.mkdir('public/js/models');
+    this.mkdir('public/js/collections');
+    this.mkdir('public/templates');
     this.mkdir('public/styles');
     this.mkdir('public/images');
     this.write('public/index.html', this.indexFile);
