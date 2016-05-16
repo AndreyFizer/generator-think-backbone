@@ -89,7 +89,7 @@ AppGenerator.prototype.genStyle = function mainStylesheet() {
 };
 
 AppGenerator.prototype.genApp = function mainStylesheet() {
-    this.copy('_app.js', 'app.js');
+    this.copy('_app.js', 'public/app.js');
 };
 
 AppGenerator.prototype.writeIndexWithRequirejs = function writeIndexWithRequirejs() {
